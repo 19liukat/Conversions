@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div id="milesToFathoms">
+        <p class="subheader">Miles to Fathoms</p>
+        <p>
+            <input v-model="miles" v-on:input="milesToFathoms" placeholder="Miles"/>
+            <input v-model="fathoms" v-on:input="fathomsToMiles" placeholder="Fathoms"/>
+        </p>
+
+    </div>
+</body>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#milesToFathoms',
+        data: {
+            miles: "",
+            fathoms: "",
+
+        },
+        methods: {
+            milesToFathoms: function(){
+                this.fathoms=this.miles/880
+            },
+           fathomsToMiles: function(){
+                this.miles=this.fathoms*880
+            }
+
+        }
+    })
+</script>
+
+</html>
