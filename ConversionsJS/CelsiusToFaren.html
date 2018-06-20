@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <title>Converter</title>
+</head>
+<body>
+    <div id="temp">
+        <p class="subheader">Unit Converter</p>
+       <input v-model="celsiusInput" v-on:input="toFahren" placeholder="Celsius">
+        <input v-model="FarenInput" v-on:input="toCelsius" placeholder="Fahrenheit">
+    </div>
+
+</body>
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var temp=new Vue({
+        el:"#temp",
+        data:{
+            celsiusInput:"",
+            FarenInput:""
+        },
+        methods:{
+            toFahren: function(){
+                this.FarenInput=(this.celsiusInput*1.8)+32;
+            },
+            toCelsius: function(){
+                this.celsiusInput=(this.FarenInput-32)*.5556;
+            }
+        
+        }
+    })
+</script>
