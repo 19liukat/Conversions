@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel=“stylesheet” type=“text/css” href=“style.css”>
+    <title>Dollars to Euros</title>
+</head>
+<body>
+    <div id="dte">
+        <p class="subheader">Dollars to Euros</p>
+        <input v-model="dollars" v-on:input="toEuros" placeholder="Dollars"/>
+        <input v-model="euros" v-on:input="toDollars" placeholder="Euros"/>
+    </div>
+</body>
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var dte = new Vue({
+        el: '#dte',
+        data: {
+            dollars: "",
+            euros: "",
+        },
+        methods: {
+            toEuros: function () {
+                this.euros = this.dollars * 0.86;
+            },
+            toDollars: function () {
+                this.dollars = this.euros * 1.16;
+            }
+        }
+    })
+</script>
