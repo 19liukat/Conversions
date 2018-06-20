@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css"href="bootstrap.css" />
+
+	<title>Metres to Feet converter</title>
+</head>
+<body>
+	<div class="row">
+		<div id="padding">
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 offset-md-4">
+			<div class="title">
+				Unit Conversion
+			</div>
+
+		</div>
+	</div>
+	<div class="row">
+		<div id="padding2">
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 offset-md-4">
+			<div class="conversion">
+				<h5 align=middle>Meters to feet conversion</h5>
+				<div id="distance">
+					
+					<input v-model="meters" v-on:input="toFeet" placeholder="Meters">
+					<input v-model="feet" v-on:input="toMeters" placeholder="Feet">
+				</div>
+			</div>
+</div>
+</div>
+				
+</body>
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+	var distance = new Vue({
+		el: "#distance",
+		data: {
+			meters: "",
+		   feet: "",
+		},
+		methods: {
+			toMeters: function () {
+				this.meters = this.feet*0.3048
+			},
+			toFeet: function () {
+				this.feet = this.meters * 3.28;
+			}
+		}
+
+	})
+</script>
