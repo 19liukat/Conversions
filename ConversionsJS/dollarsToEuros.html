@@ -3,13 +3,36 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <title>Dollars to Euros</title>
 </head>
 <body>
     <div id="dte">
-        <p class="subheader">Dollars to Euros</p>
-        <input v-model="dollars" v-on:input="toEuros" placeholder="Dollars"/>
-        <input v-model="euros" v-on:input="toDollars" placeholder="Euros"/>
+        <div class="row">
+            <div id="padding">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="title">
+                    Unit Conversion
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="padding2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="conversion">
+                        <p class="subheader">Dollars to Euros</p>
+                        <input v-model="dollars" v-on:input="toEuros" placeholder="Dollars" />
+                        <input v-model="euros" v-on:input="toDollars" placeholder="Euros" />
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
