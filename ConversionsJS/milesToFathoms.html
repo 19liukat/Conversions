@@ -3,17 +3,45 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
 
 </head>
 
 <body>
-    <div id="milesToFathoms">
-        <p class="subheader">Miles to Fathoms</p>
-        <p>
-            <input v-model="miles" v-on:input="milesToFathoms" placeholder="Miles"/>
-            <input v-model="fathoms" v-on:input="fathomsToMiles" placeholder="Fathoms"/>
-        </p>
+        <div class="row">
+                <div class="padding">
+        
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-4 offset-md-4">
+                        <div class="title">
+                            <div class="header">Unit Conversion</div>
+                        </div>
+            
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="padding2">
+                
+                        </div>
+                    </div>
 
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="conversion">
+                <div class="subheader">
+                    Miles to Fathoms
+                </div>
+                <div id="milesToFathoms">                       
+                         <input v-model="miles" v-on:input="milesToFathoms" placeholder="Miles"/>
+                        <input v-model="fathoms" v-on:input="fathomsToMiles" placeholder="Fathoms"/>
+                        
+                
+                    </div>
+
+            </div>
+        </div>
     </div>
 </body>
 
