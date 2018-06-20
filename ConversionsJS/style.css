@@ -1,2 +1,18 @@
 ﻿body {
+    background-image: url("StripeDev.jpg")
+}
+#padding {
+    padding-top: 40px;
+}
+.title{
+    background-color: white;
+    text-align: center;
+    height: 70px;
+}
+#padding2{
+    height: 80px;
+}
+.conversion{
+    background-color: white;
+    height: 500px;
 }
