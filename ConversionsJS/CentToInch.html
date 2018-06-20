@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel ="stylesheet"  type = "text/css" href = "bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro%7CPontano+Sans%7CSecular+One" rel="stylesheet">
+    
+    <title>Converter</title>
+</head>
+<body> 
+    <div class="row">
+        <div id="padding">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="title">
+                Unit Conversion
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+            <div id="padding2">
+    
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="conversion">
+                    Centimeters to Inches
+    
+<div id = "cent">
+    <p align = center class = "title"></p><br>
+    <input v-model = "centimeter" v-on:input = "toInches" placeholder = "centimeters">
+    <input v-model = "inch" v-on:input = "toCent" placeholder = "inches">
+</div>
+</div>
+</div>
+</body>
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var cent = new Vue({
+        el: "#cent",
+        data: {
+            centimeter:"",
+            inch: "",
+        },
+        methods: {
+            toInches: function(){
+                this.inch = this.centimeter/2.54;
+            },
+            toCent: function(){
+                this.centimeter = this.inch*2.54;
+            }
+        }
+
+    })
+</script>
