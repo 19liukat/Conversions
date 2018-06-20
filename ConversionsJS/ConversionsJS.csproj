@@ -68,7 +68,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap.css" />
+    <Content Include="bootstrap.js" />
+    <Content Include="dollarsToEuros.html" />
     <Content Include="index.html" />
+    <Content Include="StripeDev.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="style.css" />
     <Content Include="vue.js" />
     <Content Include="Web.config" />
