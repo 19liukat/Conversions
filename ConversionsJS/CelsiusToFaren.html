@@ -3,15 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
     
     <title>Converter</title>
 </head>
 <body>
+    <div class="row">
+             <div id="padding">
+        
+            </div>
+            </div>
+     <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="title">
+                        Unit Conversion
+                    </div>
+        
+                </div>
+            </div>
+            <div class="row">
+                    <div id="padding2">
+            
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 offset-md-4">
+                        <div class="conversion">
+    
     <div id="temp">
-        <p class="subheader">Unit Converter</p>
+        <p align= center>Celsius to Fahrenheit</p>
        <input v-model="celsiusInput" v-on:input="toFahren" placeholder="Celsius">
         <input v-model="FarenInput" v-on:input="toCelsius" placeholder="Fahrenheit">
     </div>
+</div>
+</div>
+</div>
 
 </body>
 </html>
